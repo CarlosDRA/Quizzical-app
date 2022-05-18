@@ -1,0 +1,24 @@
+@use "../abstracts/colors" as c;
+
+body{
+    font-family: "karla", sans-serif;
+    color: c.$font-color;
+}
+
+.title{
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.question{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.text{
+    font-weight: 400;
+}
+
+.answer--text{
+    font-weight: 500;
+}
