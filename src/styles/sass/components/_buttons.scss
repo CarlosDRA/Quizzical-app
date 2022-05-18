@@ -1,0 +1,19 @@
+@use "../abstracts/colors" as c;
+
+.button{
+    padding: 16px 28px;
+    border: none;
+    border-radius: 15px;
+    background-color: c.$button-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &:active{
+        box-shadow: inset 2px 2px 8px c.$button-shadow;
+    }
+}

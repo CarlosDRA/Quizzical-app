@@ -8,6 +8,7 @@ body{
 .title{
     font-weight: 700;
     font-size: 32px;
+    color: c.$font-color;
 }
 
 .question{
@@ -21,4 +22,14 @@ body{
 
 .answer--text{
     font-weight: 500;
+}
+
+.button{
+    color: c.$background-white;
+    font-weight: 500;
+}
+
+.text{
+    font-weight: 400;
+    color: c.$font-color
 }

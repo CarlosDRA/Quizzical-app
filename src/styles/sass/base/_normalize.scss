@@ -1,5 +1,5 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
+@use "../abstracts/colors.scss" as c;
 /* Document
    ========================================================================== */
 
@@ -22,6 +22,7 @@
   
   body {
     margin: 0;
+    background-color: c.$background-white;
   }
   
   /**
