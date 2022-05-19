@@ -1,0 +1,54 @@
+@use "../abstracts/colors" as c;
+
+.questions--container{
+    margin: 60px 85px;
+
+    hr{
+        margin: 30px auto;
+    }
+}
+
+/* .question{
+    nothing for the moment
+} */
+
+.answer--container{
+    padding-right: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.answer{
+    padding: 10px;
+    background-color: c.$background-white;
+    color: c.$font-color;
+    border: 1px solid c.$button-background;
+    border-radius: 8px;
+
+    &:active{
+        box-shadow: none;
+        //border: none;
+        //background-color: c.$selected;
+    }
+}
+
+.selected{
+    border: none;
+    background-color: c.$selected;
+}
+
+.correct-answer{
+    border: none;
+    background-color: c.$correct-answer;
+}
+
+.incorrect-answer{
+    border: none;
+    background-color: c.$incorrect-answer;
+    color: c.$font-color-2;
+}
+
+.unselected-answer{
+    color: c.$selected;
+    border-color: c.$selected   
+}
