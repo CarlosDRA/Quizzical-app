@@ -5,8 +5,9 @@ import Questions from "./components/Questions";
 
 function App() {
 
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
   const [isStarted, setIsStarted] = useState(false);
+  const [answers, setAnswers] = useState([])
 
 
   //I need to deeply understand this by my own, gotta read it later.
@@ -61,13 +62,26 @@ function App() {
 
   const selectAnswer = (event) => {
     const selectedOption = event.target;
-    selectedOption.classList.add("selected")
+    const question = event.target.parentNode.parentNode.children[0].innerText;
     
     const allOptions = Array.from(event.target.parentNode.children);
     allOptions.map(answer => {
       if(answer.innerText !== selectedOption.innerText){
         answer.classList.remove("selected");
       }
+    })
+
+    selectedOption.classList.add("selected")
+
+    setAnswers(prevState => {
+      let newArr = [...prevState]
+      const i = prevState.findIndex(element => element.question === question);
+      if(i > -1){
+        prevState[i].answer = selectedOption.innerText;
+      } else {
+        newArr.push({question: question, answer: selectedOption.innerText})
+      }
+      return newArr
     })
   }
 
