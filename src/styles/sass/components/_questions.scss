@@ -1,7 +1,7 @@
 @use "../abstracts/colors" as c;
 
 .questions--container{
-    margin: 60px 85px;
+    margin: 60px 285px;
 
     hr{
         margin: 30px auto;
@@ -13,13 +13,12 @@
 } */
 
 .answer--container{
-    padding-right: 300px;
     display: flex;
-    justify-content: space-between;
 }
 
 .answer{
     padding: 10px;
+    margin-right: 20px;
     background-color: c.$background-white;
     color: c.$font-color;
     border: 1px solid c.$button-background;
@@ -27,8 +26,6 @@
 
     &:active{
         box-shadow: none;
-        //border: none;
-        //background-color: c.$selected;
     }
 }
 

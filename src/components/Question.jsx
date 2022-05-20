@@ -1,12 +1,12 @@
-export default function Question(){
+export default function Question({ question, answers}){
     return(
         <div>
-            <h3 className="question">This is a question</h3>
+            <h3 className="question">{question}</h3>
             <div className="answer--container">
-                <button className="answer button">This is an answer</button>
-                <button className="answer button">This is an answer</button>
-                <button className="answer button">This is an answer</button>
-                <button className="answer button">This is an answer</button>
+                <button className="answer button">{answers[0]}</button>
+                <button className="answer button">{answers[1]}</button>
+                <button className="answer button">{answers[2]}</button>
+                <button className="answer button">{answers[3]}</button>
             </div>
             <hr />
         </div>
