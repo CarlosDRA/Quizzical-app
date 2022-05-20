@@ -1,7 +1,7 @@
 import Question from "./Question"
 
 
-export default function Questions({data}){
+export default function Questions({ data, handleSelection }){
 
     const questionElements = data.map(element => {
         const question = element.question;
@@ -12,6 +12,7 @@ export default function Questions({data}){
                 key={question}
                 question={question}
                 answers={answers}
+                selectAnswer={handleSelection}
             />
         )
     })

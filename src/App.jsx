@@ -59,8 +59,20 @@ function App() {
     setIsStarted(true);
   }
 
+  const selectAnswer = (event) => {
+    const selectedOption = event.target;
+    selectedOption.classList.add("selected")
+    
+    const allOptions = Array.from(event.target.parentNode.children);
+    allOptions.map(answer => {
+      if(answer.innerText !== selectedOption.innerText){
+        answer.classList.remove("selected");
+      }
+    })
+  }
+
   const startPage = <StartPage start={StartQuiz} />
-  const questionsPage= <Questions data={data} />
+  const questionsPage= <Questions data={data} handleSelection={selectAnswer} />
 
   return(
     <main>
