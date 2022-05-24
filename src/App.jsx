@@ -86,7 +86,7 @@ function App() {
   }
 
   const startPage = <StartPage start={StartQuiz} />
-  const questionsPage= <Questions data={data} handleSelection={selectAnswer} />
+  const questionsPage= <Questions data={data} handleSelection={selectAnswer} answers={answers.length}/>
 
   return(
     <main>
